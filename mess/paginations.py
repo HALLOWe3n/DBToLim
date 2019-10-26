@@ -1,6 +1,6 @@
-from rest_framework.pagination import LimitOffsetPagination
+from rest_framework.pagination import PageNumberPagination
 
 
-class MessagesLimitOffsetPagination(LimitOffsetPagination):
-    default_limit = 10
-    max_limit = 10
+class MessagesPageNumberPagination(PageNumberPagination):
+    page_size = 10
+    page_query_param = 'm_page'

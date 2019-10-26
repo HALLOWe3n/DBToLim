@@ -5,14 +5,14 @@ from rest_framework.permissions import AllowAny
 
 from .models import Message
 from .serializers import MessageSerializer
-from .paginations import MessagesLimitOffsetPagination
+from .paginations import MessagesPageNumberPagination
 
 
 class MessageListAPIView(ListAPIView):
     permission_classes = (AllowAny, )
     queryset = Message.objects.all()
     serializer_class = MessageSerializer
-    pagination_class = MessagesLimitOffsetPagination
+    pagination_class = MessagesPageNumberPagination
 
 
 class MessageCreateAPIView(CreateAPIView):
