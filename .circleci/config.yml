@@ -54,6 +54,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
+            pip freeze
             python manage.py test
 
       - store_artifacts:
