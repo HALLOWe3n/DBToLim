@@ -73,6 +73,9 @@ Documentation API be on the way
 ### Also uses CircleCI for auto deployment and tests.
 
 (https://dbtolimit.herokuapp.com/)
+the start page will return the code 400 - do not worry :)
+go to (https://dbtolimit.herokuapp.com/docs/)
+there will also be documentation
 
 To enter the admin panel:
 - admin
