@@ -82,6 +82,9 @@ DATABASES = {
         'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
         'PORT': os.environ.get('DATABASE_PORT'),
         'HOST': os.environ.get('DATABASE_HOST'),
+        'TEST': {
+            'NAME': 'test_my_db'
+        }
     }
 }
 
@@ -123,3 +126,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.AllowAny',
+    ),
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json',
+}
